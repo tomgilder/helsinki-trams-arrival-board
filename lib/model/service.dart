@@ -1,3 +1,4 @@
+import 'package:flutter_trams/model/clock.dart';
 import 'package:intl/intl.dart';
 
 class Service {
@@ -12,7 +13,7 @@ class Service {
   final DateFormat _dateFormatter = new DateFormat('HH:mm');
 
   String get displayTime {
-    final now = DateTime.now();
+    final now = Clock.now();
 
     if (isRealtime) {
       final difference = realtimeArrival.difference(now);
